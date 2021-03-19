@@ -2,8 +2,7 @@ package array._283;
 
 import java.util.Arrays;
 
-//283. Move Zeroes
-public class Solution {
+class Solution {
     public void moveZeroes(int[] nums) {
         if (nums.length == 0) {
             return;
