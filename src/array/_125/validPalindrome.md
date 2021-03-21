@@ -8,4 +8,4 @@
 >Input: s = "race a car"
 >Output: false
 ## 解题思路
-- 双指针
+- 双指针[对撞指针]
