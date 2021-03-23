@@ -19,4 +19,16 @@
   * 遍历原数组
     + 对sums进行二分查找，找到比target+sums[i-1]的值的下标bound
     + bound-(i-1)即当前情况下，和大于target需要的元素的个数
-- 滑动窗口
+- 滑动窗口!
+ ![img_1.png](img_1.png)
+ ![img_2.png](img_2.png)
+ ![img_3.png](img_3.png) 
+ ![img_4.png](img_4.png)
+ ![img_5.png](img_5.png)
+ ![img_6.png](img_6.png)
+ ![img_7.png](img_7.png)
+ ![img_8.png](img_8.png)
+ ![img_9.png](img_9.png)
+ ![img_10.png](img_10.png)
+ ![img_11.png](img_11.png)
+ ![img_12.png](img_12.png) 
