@@ -3,24 +3,7 @@ package array._189;
 import java.util.Arrays;
 
 public class Solution {
-    public void rotate(int[] nums, int k) {
-        k %= nums.length;
-        reverse(nums, 0, nums.length - 1);
-        reverse(nums, 0, k - 1);
-        reverse(nums, k, nums.length - 1);
-    }
-
-    public void reverse(int[] nums, int start, int end) {
-        while (start < end) {
-            int temp = nums[start];
-            nums[start] = nums[end];
-            nums[end] = temp;
-            start += 1;
-            end -= 1;
-        }
-    }
-
-    public void rotate2(int[] nums, int k) {
+    public void rotate1(int[] nums, int k) {
         int len = nums.length;
         k = k % len;
         int count = 0;         // 记录交换位置的次数，n个同学一共需要换n次
@@ -36,6 +19,24 @@ public class Solution {
                 count++;
             } while (start != cur);     // 循环暂停，回到起始位置，角落无人
 
+        }
+    }
+
+    
+    public void rotate2(int[] nums, int k) {
+        k %= nums.length;
+        reverse(nums, 0, nums.length - 1);
+        reverse(nums, 0, k - 1);
+        reverse(nums, k, nums.length - 1);
+    }
+
+    public void reverse(int[] nums, int start, int end) {
+        while (start < end) {
+            int temp = nums[start];
+            nums[start] = nums[end];
+            nums[end] = temp;
+            start += 1;
+            end -= 1;
         }
     }
 
