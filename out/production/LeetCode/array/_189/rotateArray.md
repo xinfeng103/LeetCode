@@ -13,6 +13,8 @@
 
 ## 解题思路
 - 环装替换
+   * 题解
+     https://leetcode-cn.com/problems/rotate-array/solution/xuan-zhuan-shu-zu-yuan-di-huan-wei-xiang-xi-tu-jie/
 - 数组翻转
   * 先翻转整个数组
   * 翻转前k个元素
