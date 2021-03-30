@@ -15,7 +15,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] nums = {2, 2, 1};
+        int[] nums = {2,2,1};
         int ans = solution.singleNumber(nums);
         System.out.println(ans);
     }
