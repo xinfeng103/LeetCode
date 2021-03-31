@@ -57,7 +57,7 @@ public class Solution {
         Solution solution = new Solution();
         int[] nums1 = {1, 2, 2, 1};
         int[] nums2 = {2, 2};
-        int[] ans = solution.intersect1(nums1, nums2);
+        int[] ans = solution.intersect(nums1, nums2);
         System.out.println(Arrays.toString(ans));
     }
 }
