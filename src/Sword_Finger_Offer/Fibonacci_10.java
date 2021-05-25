@@ -8,7 +8,7 @@ public class Fibonacci_10 {
         }
         int a = 1, b = 1;
         for (; n > 2; n--) {
-            b = b + a;
+            b = b + a; // 和可能会超过long类型的最大值，是否处理看题目要求
             a = b - a;
         }
         return b;
