@@ -17,6 +17,10 @@ package Sword_Finger_Offer;
     */
 
 
+/* TODO: 回溯法非常适合由多个步骤组成的问题，并且每个步骤都有多个选项。
+         通常在二维矩阵上找路径这类问题都可以用回溯法解决。
+ */
+
 public class Problem12 {
     public boolean hasPath(char[] matrix, int rows, int cols, char[] str) {
         if (matrix.length == 0 || str.length == 0)
