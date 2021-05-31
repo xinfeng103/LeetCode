@@ -21,6 +21,7 @@
 // 2 <= n <= 1000
 
 
+//拆分尽可能多，因为一般拆分越多乘积越大；但是在数值小于等于3的时候， 拆分会使乘积变小
 package leetcode.editor.cn;
 public class JianShengZi_2 {
     public static void main(String[] args){
