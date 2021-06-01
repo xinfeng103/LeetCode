@@ -99,6 +99,14 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ShanChuLianBiaoDeJieDianLcof.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ShanChuLianBiaoDeJieDianLcof.java" />
+              <option name="questionId" value="100299" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ShuZhiDeZhengShuCiFangLcof.java">
           <value>
             <LeetcodeEditor>
@@ -136,6 +144,14 @@
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/XuanZhuanShuZuDeZuiXiaoShuZiLcof.java" />
               <option name="questionId" value="100278" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/leetcode/editor/cn/ZhengZeBiaoDaShiPiPeiLcof.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/leetcode/editor/cn/ZhengZeBiaoDaShiPiPeiLcof.java" />
+              <option name="questionId" value="100297" />
             </LeetcodeEditor>
           </value>
         </entry>
