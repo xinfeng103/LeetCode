@@ -31,18 +31,18 @@ public class FanZhuanLianBiaoLcof {
 
     //leetcode submit region begin(Prohibit modification and deletion)
 // Definition for singly-linked list.
-//    public static class ListNode {
-//        int val;
-//        ListNode next;
-//
-//        ListNode(int x) {
-//            val = x;
-//        }
-//        ListNode(int x,ListNode next){
-//            val = x;
-//            this.next=next;
-//        }
-//    }
+    public static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+        ListNode(int x,ListNode next){
+            val = x;
+            this.next=next;
+        }
+    }
 
     class Solution {
         public ListNode reverseList(ListNode head) {
