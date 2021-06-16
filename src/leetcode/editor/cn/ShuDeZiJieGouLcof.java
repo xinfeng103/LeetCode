@@ -43,15 +43,15 @@ public class ShuDeZiJieGouLcof {
 
     //leetcode submit region begin(Prohibit modification and deletion)
 // Definition for a binary tree node.
-//    public static class TreeNode {
-//        int val;
-//        TreeNode left;
-//        TreeNode right;
-//
-//        TreeNode(int x) {
-//            val = x;
-//        }
-//    }
+    public static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
 
     class Solution {
         public boolean isSubStructure(TreeNode A, TreeNode B) {
