@@ -43,15 +43,15 @@ public class DuiChengDeErChaShuLcof {
 
     //leetcode submit region begin(Prohibit modification and deletion)
 // Definition for a binary tree node.
-//    public class TreeNode {
-//        int val;
-//        TreeNode left;
-//        TreeNode right;
-//
-//        TreeNode(int x) {
-//            val = x;
-//        }
-//    }
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
 
     /*
     本题考查的是二叉树的递归。
