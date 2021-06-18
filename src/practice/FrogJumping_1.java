@@ -16,9 +16,9 @@ package practice;
       当只剩下一个台阶n = 1时，那么只有一种跳法，即f(1) = 1;
       当n = 2时，此时跳法为2种，即f(2) = 2;
  */
-public class FrogJumping {
+public class FrogJumping_1 {
     public int solve(int n) {
-        if (n <= 2) return n;
+        if (n <= 3) return n;
         int f1 = 1, f2 = 2, sum = 0;
         for (; n > 2; n--) {
             sum = f1 + f2;
@@ -29,8 +29,8 @@ public class FrogJumping {
     }
 
     public static void main(String[] args) {
-        int n = 5;
-        FrogJumping solution = new FrogJumping();
+        int n = 3;
+        FrogJumping_1 solution = new FrogJumping_1();
         int ans = solution.solve(n);
         System.out.println(ans);
     }
