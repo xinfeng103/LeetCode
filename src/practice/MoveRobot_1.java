@@ -21,7 +21,7 @@ package practice;
              dp[0] [0….n-1] = 1; // 相当于最上面一行，机器人只能一直往左走,即只有一种方式，所以初值为1
              dp[0…m-1] [0] = 1; // 相当于最左面一列，机器人只能一直往下走
  */
-public class MoveRobot {
+public class MoveRobot_1 {
     public static int uniquePaths(int m, int n) { // 网格为m行n列
         if (m <= 0 || n <= 0) return 0;
 
