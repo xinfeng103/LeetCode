@@ -1,6 +1,4 @@
-package practice;
-
-import sort.QuickSort;
+package sort;
 
 import java.util.Arrays;
 
