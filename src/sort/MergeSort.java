@@ -3,29 +3,30 @@ package sort;
 import java.util.Arrays;
 
 public class MergeSort {
-    public static void mergeSort(int[] arr, int low, int high) {
-//        if (low < high) {
-//            mergeSort(arr, low, mid - 1);
-//            mergeSort(arr, mid + 1, high);
-//        }
-    }
+    public static int[] mergeSort(int[] nums, int low, int high) {
+        if (low == high)
+            return new int[]{nums[low]};
 
-    static int merge(int[] arr, int low, int high) {
-        int pivot = arr[low];//选第一个元素作为枢纽元
-        while (low < high) {
-            while (low < high && arr[high] >= pivot) high--;
-            arr[low] = arr[high];//从后面开始找到第一个小于pivot的元素，放到low位置
-            while (low < high && arr[low] <= pivot) low++;
-            arr[high] = arr[low];//从前面开始找到第一个大于pivot的元素，放到high位置
+        int mid = low + (high - low) / 2;
+        int[] leftArr = mergeSort(nums, low, mid); //左有序数组
+        int[] rightArr = mergeSort(nums, mid + 1, high); //右有序数组
+        int[] newNum = new int[leftArr.length + rightArr.length]; //新有序数组
+
+        int k = 0, i = 0, j = 0;
+        while (i < leftArr.length && j < rightArr.length) {
+            newNum[k++] = leftArr[i] < rightArr[j] ? leftArr[i++] : rightArr[j++];
         }
-        arr[low] = pivot;//最后枢纽元放到low的位置(high也可以，最后low=high）
-        return low;
+        while (i < leftArr.length)
+            newNum[k++] = leftArr[i++];
+        while (j < rightArr.length)
+            newNum[k++] = rightArr[j++];
+        return newNum;
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1,2,3,4,5};
+        int[] arr = new int[]{1, 2, 3, 4, 6, 5};
         System.out.println("排序前" + Arrays.toString(arr));
-        mergeSort(arr, 0, arr.length - 1);
-        System.out.println("排序后" + Arrays.toString(arr));
+        int[] ans = mergeSort(arr, 0, arr.length - 1);
+        System.out.println("排序后" + Arrays.toString(ans));
     }
 }
