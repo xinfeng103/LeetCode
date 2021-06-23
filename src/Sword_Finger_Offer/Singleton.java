@@ -32,7 +32,7 @@ class Singleton2 {
     }
 
     // 加锁保证只创建一次对象
-    public synchronized static Singleton2 getInstance() {
+    public static synchronized Singleton2 getInstance() {
         if (singleton == null) {
             singleton = new Singleton2();
         }
@@ -43,19 +43,19 @@ class Singleton2 {
 // 上面的懒汉模式每次调用getInstance()时都需要进行线程锁定判断，在多线程高并发访问环境中，将会导致系统性能大大降低
 // 事实上，我们无须对整个getInstance()方法进行锁定，只需对其中的代码“instance = new LazySingleton();”进行锁定即可
 class Singleton3 {
-    private static Singleton3 singleton = null;
+    private static Singleton3 instance = null;
 
     private Singleton3() {
     }
 
     // 加锁保证只创建一次对象
     public static Singleton3 getInstance() {
-        if (singleton == null) {
+        if (instance == null) {
             synchronized (Singleton3.class) {
-                singleton = new Singleton3();
+                instance = new Singleton3();
             }
         }
-        return singleton;
+        return instance;
     }
 }
 
@@ -97,7 +97,7 @@ class Singleton4 {
 
 /*
   饿汉式单例类不能实现延迟加载，不管将来用不用始终占据内存；懒汉式单例类线程安全控制烦琐，而且性能受影响。
-  Initializationon Demand Holder (IoDH)可以结合二者的优点，在IoDH中，我们在单例类中增加一个
+  Initialization on Demand Holder (IoDH)可以结合二者的优点，在IoDH中，我们在单例类中增加一个
   静态(static)内部类，在该内部类中创建单例对象，再将该单例对象通过getInstance()方法返回给外部使用
  */
 class Singleton5 {
