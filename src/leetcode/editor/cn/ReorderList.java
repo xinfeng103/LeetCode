@@ -68,15 +68,22 @@ public class ReorderList {
 
         // 反转链表，遍历当前位置（保存前后位置）
         public ListNode reverseList(ListNode head) {
-            ListNode prev = null;
-            ListNode curr = head;
-            while (curr != null) {
-                ListNode nextTemp = curr.next;
-                curr.next = prev;
-                prev = curr;
-                curr = nextTemp;
+//            ListNode prev = null;
+//            ListNode curr = head;
+//            while (curr != null) {
+//                ListNode nextTemp = curr.next;
+//                curr.next = prev;
+//                prev = curr;
+//                curr = nextTemp;
+//            }
+//            return prev;
+            if(head == null || head.next == null) {
+                return head;
             }
-            return prev;
+            ListNode newHead = reverseList(head.next);
+            head.next.next = head;
+            head.next = null;
+            return newHead;
         }
 
         // 合并链表
