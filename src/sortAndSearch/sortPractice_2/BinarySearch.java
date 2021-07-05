@@ -1,27 +1,25 @@
-package search;
-
-import java.util.Arrays;
+package sortAndSearch.sortPractice_2;
 
 public class BinarySearch {
     public static int binarySearch(int[] arr, int target) {
-        if (arr.length == 0) return -1;
         int low = 0, high = arr.length - 1, mid;
-        while (low < high) {
+        while (low <= high) {
             mid = high - ((high - low) >> 1);
-            if (arr[mid] == target) {
+            if (target == arr[mid]) {
                 return mid;
-            } else if (arr[mid] < target) {
-                low = mid + 1;
-            } else {
+            } else if (target < arr[mid]) {
                 high = mid - 1;
+            } else {
+                low = mid + 1;
             }
         }
-        return -low;
+        return -1;
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 2, 3, 5, 6, 8, 9};
-        int index = binarySearch(arr, 5);
+        int[] arr = new int[]{1, 2, 4, 6, 8, 9, 22};
+        int target = 8;
+        int index = binarySearch(arr, target);
         System.out.println(index);
     }
 }

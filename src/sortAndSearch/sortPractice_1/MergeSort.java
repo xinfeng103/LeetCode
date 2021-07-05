@@ -1,4 +1,4 @@
-package sort;
+package sortAndSearch.sortPractice_1;
 
 import java.util.Arrays;
 
