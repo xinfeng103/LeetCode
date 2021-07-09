@@ -2,7 +2,7 @@ package sortAndSearch.sortPractice_1;
 
 import java.util.Arrays;
 
-// 小根堆
+// 小根堆：构建+调整
 public class Heap {
     public static void main(String[] args) {
         int[] arr = new int[]{4, 2, 1};
